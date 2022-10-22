@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.aor.numbers.ListFiltererTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-10-21T15:04:24" hostname="LAPTOP-9IBJDJBI" time="0.024">
+<testsuite name="com.aor.numbers.ListFiltererTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-10-22T15:20:37" hostname="LAPTOP-9IBJDJBI" time="0.012">
   <properties/>
-  <testcase name="list_filterer_Test()" classname="com.aor.numbers.ListFiltererTest" time="0.024"/>
+  <testcase name="list_filterer_Test()" classname="com.aor.numbers.ListFiltererTest" time="0.012"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

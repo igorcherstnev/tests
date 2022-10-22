@@ -3,25 +3,28 @@ package com.aor.numbers;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class ListFilterTest {
     @Test
     public void PositiveFilterTest(){
-        Integer i= 5;
+        List<Integer> l= Arrays.asList(-5,-2,5,0,-7);
+        List<Boolean> expected=Arrays.asList(false,false,true,false,false);
         PositiveFilter filter= new PositiveFilter();
-        boolean result=filter.accept(i);
-        Boolean expected=true;
-        Assertions.assertEquals(expected,result);
-
-
+        for(int i=0;i<l.size();i++){
+            Boolean expect=expected.get(i);
+            Assertions.assertEquals(expect,filter.accept(l.get(i)));
+        }
     }
     @Test
     public void DivisibleByFilterTest(){
-        Integer n_tested= 10;
         DivisibleByFilter filter= new DivisibleByFilter(5);
-        boolean result=filter.accept(n_tested);
-        Boolean expected=true;
-        Assertions.assertEquals(expected,result);
-
-
+        List<Integer> l= Arrays.asList(-5,-2,5,0,-7);
+        List<Boolean> expected=Arrays.asList(true,false,true,true,false);
+        for(int i=0;i<l.size();i++){
+            Boolean expect=expected.get(i);
+            Assertions.assertEquals(expect,filter.accept(l.get(i)));
+        }
     }
 }
